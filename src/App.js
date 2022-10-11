@@ -1,7 +1,5 @@
-import React, { useEffect } from "react";
-import Friends from "./components/Friends";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
+import React, { Children, useEffect } from "react";
+import Layout from "./components/Layout";
 import { UserInfo } from "./services/user";
 import { loginUrl } from "./spotify";
 import { Session, Track, User } from "./store";
@@ -41,15 +39,9 @@ export default function App() {
           </a>
         </div>
       ) : (
-        <div className="mybody">
-          <Header />
-          <div className="flex flex-row w-full">
-          <Hero/>
-          <div className="">
-          <Friends/>
-          </div>
-          </div>
-        </div>
+        <Layout>
+         <span className="text-white"> Selam</span>
+        </Layout>
       )}
     </>
   );
