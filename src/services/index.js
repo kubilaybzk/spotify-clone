@@ -1,8 +1,10 @@
+import axios from "axios";
+
 function request(url, header) {
   return new Promise(async (resolve, reject) => {
-    const responce = await fetch(url, header);
-    const result = await responce.json();
-    if (responce.ok && responce.status === 200) {
+    const response = await axios.get(url, header);
+    const result = await response.data;
+    if (response.status === 200 || response.status === 201) {
       resolve(result);
     } else {
       reject(result);

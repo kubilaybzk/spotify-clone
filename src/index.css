@@ -3,3 +3,6 @@
 @tailwind utilities;
 
 
+*a,span,p{
+    font-family: sans-serif;
+}

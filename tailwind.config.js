@@ -6,9 +6,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-       Primary:"#26292E",
-       ListBg:"#0F0F0F",
-       TextColor:"#9B9B9B",
+       Primary:"#22252A",
+       Secondary:"#25282D",
+       TextColor:"#B3B3B3",
        SmalTextColor:"#858585",
        BottomMenuColor:"#3E3A39",
        SpGreen:"#1ED760",

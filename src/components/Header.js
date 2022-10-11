@@ -1,5 +1,4 @@
-import React from "react";
-import { UserInfo } from "../services/user";
+import React, { useEffect } from "react";
 import { User } from "../store";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BsThreeDots } from "react-icons/bs";
@@ -7,10 +6,14 @@ import Icons from "./Icons";
 
 
 export default function Header() {
-
-
-  const userinfo = User((state) => state.user);
-
+  console.log("render oldu header")
+  const setUser = User((state) => state.setUser);
+  const getUser = User((state) => state.user);
+  
+  useEffect(()=>{
+    setUser()
+  },[])
+  
 
   return (
     <div className="px-[42px] py-[32px] flex w-full flex-row bg-Primary justify-between">
@@ -27,7 +30,7 @@ export default function Header() {
         <BsThreeDots className="text-TextColor text-[30px] hidden md:flex" />
         <Icons />
         <span className="text-TextColor font-normal">
-          {userinfo && userinfo.display_name}
+          {getUser && getUser.display_name}
         </span>
       </div>
     </div>

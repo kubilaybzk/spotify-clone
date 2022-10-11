@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
+import Friends from "./components/Friends";
 import Header from "./components/Header";
+import Hero from "./components/Hero";
 import { UserInfo } from "./services/user";
 import { loginUrl } from "./spotify";
 import { Session, Track, User } from "./store";
@@ -7,7 +9,7 @@ import { Session, Track, User } from "./store";
 export default function App() {
   const token = Session((state) => state.session);
   const addSession = Session((state) => state.addSession);
-  const userinfo2 = User((state) => state.setUser);
+
 
 
 
@@ -27,7 +29,7 @@ export default function App() {
       window.localStorage.setItem("token", token);
     }
     addSession(token);
-    userinfo2();
+   
   }, [token]);
 
   return (
@@ -41,6 +43,12 @@ export default function App() {
       ) : (
         <div className="mybody">
           <Header />
+          <div className="flex flex-row w-full">
+          <Hero/>
+          <div className="">
+          <Friends/>
+          </div>
+          </div>
         </div>
       )}
     </>
