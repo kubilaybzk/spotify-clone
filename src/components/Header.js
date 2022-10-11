@@ -1,22 +1,34 @@
 import React from "react";
 import { UserInfo } from "../services/user";
 import { User } from "../store";
+import { AiOutlineSearch } from "react-icons/ai";
+import { BsThreeDots } from "react-icons/bs";
+import Icons from "./Icons";
+
 
 export default function Header() {
+
+
   const userinfo = User((state) => state.user);
-  console.log(userinfo);
+
 
   return (
-    <div className="px-[42px] py-[32px] bg-transparent">
+    <div className="px-[42px] py-[32px] flex w-full flex-row bg-Primary justify-between">
       <div className="flex flex-row items-center justify-start gap-7">
         <img className="w-8 h-8" src="./Logo.png" alt="Logo" />
         <span className="text-TextColor font-medium">YOUR LIBRARY</span>
         <span className="text-TextColor font-medium">PLAYLİSTS</span>
       </div>
-      <div className="flex justify-end flex-row items-center">
-        <label className="w-[115px] h-[17px] ">
-          
+      <div className="flex flex-row justify-center items-center align-middle gap-4 md:gap-7">
+        <label className="w-[180px] rounded-lg px-2 h-[25px] bg-white  flex-row justify-start items-center hidden md:flex ">
+          <AiOutlineSearch className="text-TextColor text-[22px] mr-[1px]" />
+          <input placeholder="Search" className="outline-none w-20"></input>
         </label>
+        <BsThreeDots className="text-TextColor text-[30px] hidden md:flex" />
+        <Icons />
+        <span className="text-TextColor font-normal">
+          {userinfo && userinfo.display_name}
+        </span>
       </div>
     </div>
   );

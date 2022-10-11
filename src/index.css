@@ -2,11 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-image: url("../public/BG.PNG");
-  background-repeat: no-repeat;
-  height: 100vh;
-  background-position: center;
-  background-size: contain;
-  padding: 42px 32px;
-}
+
