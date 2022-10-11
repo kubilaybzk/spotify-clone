@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
-import { loginUrl } from "./spotify";
-import Session from "./store";
+import Header from "./components/Header";
 import { UserInfo } from "./services/user";
-
+import { loginUrl } from "./spotify";
+import { Session, User } from "./store";
 
 export default function App() {
-  
   const token = Session((state) => state.session);
   const addSession = Session((state) => state.addSession);
+  const userinfo2 = User((state) => state.setUser);
 
   useEffect(() => {
     //User token'ı localStorage içine kaydettiğimiz alan.
@@ -25,11 +25,8 @@ export default function App() {
       window.localStorage.setItem("token", token);
     }
     addSession(token);
+    userinfo2()
   }, [token]);
-
-  useEffect(()=>{
-    UserInfo().then(res=>console.log(res))
-  },[])
 
 
   return (
@@ -41,7 +38,7 @@ export default function App() {
           </a>
         </div>
       ) : (
-        <div>Selam</div>
+        <div className="mybody"><Header/></div>
       )}
     </>
   );
