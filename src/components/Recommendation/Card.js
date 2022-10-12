@@ -5,7 +5,7 @@ import {BsFillPlayCircleFill} from "react-icons/bs";
 export default function Card({ item }) {
   console.log(item);
   return (
-    <div className="w-[330px]  h-[330px] overflow-hidden relative rounded-[50px] group">
+    <div className="w-[330px]  h-[330px] overflow-hidden relative rounded-[50px] group border-Border border-2">
       <div className="w-full h-full relative  ">
         <img src={item.images[0].url} className="" />
         <div className="absolute top-0 w-full h-full bg-black opacity-60 group-hover:opacity-0"></div>
