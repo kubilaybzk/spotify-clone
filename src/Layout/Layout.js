@@ -14,9 +14,9 @@ export default function Layout({ children }) {
   console.log();
   return (
     <div className="p-[40px] h-screen bg-Primary flex flex-row">
-     <div className="h-full pt-2"> 
-     <LeftMenu />
-     </div>
+      <div className="h-full pt-2">
+        <LeftMenu />
+      </div>
       <div className="flex flex-col w-full overflow-x-hidden pt-2">
         <Header getUser={getUser} />
         <div className="pl-9 pt-[30px] max-w[1200px]">{children}</div>

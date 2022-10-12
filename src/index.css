@@ -7,24 +7,3 @@ span,
 p {
   font-family: sans-serif;
 }
-
-.slick-slide {
-  margin-left: -20px !important;
-  margin-right: 25px !important;
-  z-index: 0 !important;
-}
-
-.slick-list {
-  margin-left: -0px !important;
-  margin-right: -0px !important;
-  background-color: red !important;
-}
-
-.slick-slide.slick-active {
-  margin-right: -80px !important;
-}
-.slick-slide.slick-active.slick-current>div>div{
-  z-index: 5 !important;
-  transition: all;
-
-}
