@@ -10,9 +10,8 @@ module.exports = {
        Secondary:"#25282D",
        TextColor:"#B3B3B3",
        Border:"#333333",
-       TextColor:"#E5E7EB",
+       Green:"#1ED760",
        SpGreen:"#1ED760",
-       TextColor:"#AEAEB3"
 
       },
     },

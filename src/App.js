@@ -1,5 +1,7 @@
 import React, { Children, useEffect } from "react";
-import Layout from "./components/Layout";
+
+import Recommendation from "./components/Recommendation/Recommendation";
+import Layout from "./Layout/Layout";
 import { UserInfo } from "./services/user";
 import { loginUrl } from "./spotify";
 import { Session, Track, User } from "./store";
@@ -40,7 +42,7 @@ export default function App() {
         </div>
       ) : (
         <Layout>
-         <span className="text-white"> Selam</span>
+          <Recommendation/>
         </Layout>
       )}
     </>

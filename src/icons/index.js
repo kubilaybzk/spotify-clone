@@ -1,0 +1,12 @@
+export { default as Adjustments } from "./Adjustments";
+export { default as Compass } from "./Compass";
+export { default as Home } from "./Home";
+export { default as SpotifyLogo } from "./SpotifyLogo";
+export { default as BadgeCheck } from "./BadgeCheck";
+export { default as Bell } from "./Bell";
+export { default as Cog } from "./Cog";
+export { default as Collection } from "./Collection";
+export { default as Flag } from "./Flag";
+export { default as Heart } from "./Heart";
+export { default as Microphone } from "./Microphone";
+export { default as Play } from "./Play";

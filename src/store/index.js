@@ -1,6 +1,7 @@
 import create from "zustand";
 import { devtools, persist } from "zustand/middleware";
 import { currentlyPlayingInfo } from "../services/player";
+import { NewReleasesAlbumsInfo } from "../services/recomandations";
 import { UserInfo } from "../services/user";
 
 const SessionStore = (set) => ({
@@ -24,11 +25,17 @@ const currentlyPlayingStore = (set) => ({
   },
 });
 
-
+const NewReleasesAlbumsInfoStore = (set) => ({
+  NewReleases: null,
+  setNewReleases: async(x) => {
+    let Data = await NewReleasesAlbumsInfo();
+    set((state) => ({ NewReleases: Data }));
+  },
+});
 
 
 const Session = create(devtools(SessionStore));
 const User = create(devtools(UserStore));
 const currentlyPlaying = create(devtools(currentlyPlayingStore));
-
-export { Session, User,currentlyPlaying };
+const NewReleasesAlbums = create(devtools(NewReleasesAlbumsInfoStore));
+export { Session, User,currentlyPlaying,NewReleasesAlbums };

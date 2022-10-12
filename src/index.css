@@ -2,7 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+*a,
+span,
+p {
+  font-family: sans-serif;
+}
 
-*a,span,p{
-    font-family: sans-serif;
+.slick-slide {
+  margin-left: -20px !important;
+  margin-right: 25px !important;
+}
+
+.slick-list {
+  margin-left: -0px !important;
+  margin-right: -0px !important;
+}
+
+.slick-slide.slick-active{
+
+    margin-right: -80px !important; 
 }
