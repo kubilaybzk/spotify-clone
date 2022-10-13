@@ -14,6 +14,7 @@ const SvgPlay = (props) => (
       clipRule="evenodd"
       d="M30 54a24 24 0 1 0 0-48 24 24 0 0 0 0 48Zm-1.335-32.496A3 3 0 0 0 24 24v12a3 3 0 0 0 4.665 2.496l9-6a3 3 0 0 0 0-4.992l-9-6Z"
       fill="currentColor"
+      stroke="currentColor"
     />
     <rect
       x={4}

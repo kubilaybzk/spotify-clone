@@ -12,6 +12,7 @@ module.exports = {
        Border:"#333333",
        Green:"#1ED760",
        SpGreen:"#1ED760",
+       IconDef:"#b3b3b3"
 
       },
     },

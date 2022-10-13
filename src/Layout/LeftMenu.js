@@ -2,15 +2,35 @@ import React from "react";
 import { Collection, Compass, Heart, Home, Microphone } from "../icons";
 export default function LeftMenu() {
   return (
-    <div className="
-    flex flex-col h-full 
-    gap-[54px] items-center lg:min-w-[60px]">
-      <img src="./Logo.png" alt="SpotifyLogo" className="w-[60px] h-[60px]" />
-      <Home className=" cursor-pointer text-white text-[35px]" />
-      <Compass className=" cursor-pointer text-white text-[35px]" />
-      <Microphone className=" cursor-pointer text-white text-[35px]" />
-      <Collection className=" cursor-pointer text-white text-[35px]" />
-      <Heart className=" cursor-pointer text-white text-[35px]" />
+    <div className="flex flex-col h-full gap-[30px] items-center mt-[30px] md:mt-[40px] pl-3">
+     
+      
+     
+      <div className="flex flex-row w-full  justify-start items-center gap-3">
+        <Compass className=" cursor-pointer text-IconDef text-[24px]" />
+        <span className="text-TextColor hidden lg:flex">Keşfet</span>
+      </div>
+     
+      <div className="flex flex-row w-full  justify-start items-center gap-3">
+        <Microphone className=" cursor-pointer text-IconDef text-[24px]" />
+        <span className="text-TextColor hidden lg:flex">Selam</span>
+      </div>
+     
+      <div className="flex flex-row w-full  justify-start items-center gap-3">
+        <Collection className=" cursor-pointer text-IconDef text-[24px]" />
+        <span className="text-TextColor hidden lg:flex">Selam</span>
+      </div>
+     
+      <div className="flex flex-row w-full  justify-start items-center gap-3">
+        <Heart className=" cursor-pointer text-IconDef text-[24px]" />
+        <span className="text-TextColor hidden lg:flex">Selam</span>
+      </div>
     </div>
   );
 }
+
+
+/*
+
+
+*/
